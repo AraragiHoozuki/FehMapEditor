@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "tjSPVwxVEC1h9NMntE6v+ucty+G2TPjWnfsZewnvOMztWsL6j+XzwkQY/Dw874aoYzuxCV1OLa1BgD4AAzXtxw==",
+  "success": true,
+  "projectFilePath": "D:\\Developer\\FehMapEditor\\FehMapEditor\\FehMapEditor.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lolin\\.nuget\\packages\\dynamicweb.webp\\2.0.0\\dynamicweb.webp.2.0.0.nupkg.sha512",
+    "C:\\Users\\lolin\\.nuget\\packages\\materialdesigncolors\\2.0.4\\materialdesigncolors.2.0.4.nupkg.sha512",
+    "C:\\Users\\lolin\\.nuget\\packages\\materialdesignthemes\\4.3.0\\materialdesignthemes.4.3.0.nupkg.sha512",
+    "C:\\Users\\lolin\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\lolin\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\lolin\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

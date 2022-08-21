@@ -1,0 +1,82 @@
+﻿<Window x:Class="FehMapEditor.SkillSelectWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FehMapEditor"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="SkillSelectWindow" Height="700" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <TextBox x:Name="SkillSearchField" Style="{StaticResource MaterialDesignFilledTextBox}"
+                    materialDesign:HintAssist.Hint="Search Name" materialDesign:TextFieldAssist.HasClearButton="True"
+                    Text="" Cursor="IBeam" TextChanged="FilterChanged"/>
+            <ComboBox x:Name="WeaponTypeFilter" Style="{StaticResource MaterialDesignOutlinedComboBox}" materialDesign:TextFieldAssist.HasClearButton="True"
+                    materialDesign:HintAssist.Hint="WeaponType" SelectionChanged="FilterChanged"/>
+            <ComboBox x:Name="MoveTypeFilter" Style="{StaticResource MaterialDesignOutlinedComboBox}" materialDesign:TextFieldAssist.HasClearButton="True"
+                    materialDesign:HintAssist.Hint="MoveType" SelectionChanged="FilterChanged"/>
+            <CheckBox x:Name="AssistChecker" materialDesign:CheckBoxAssist.CheckBoxSize="30"
+                    IsChecked="False" Checked="FilterChanged" Unchecked="FilterChanged"
+                    Content="Assist"/>
+            <CheckBox x:Name="SpecialChecker" materialDesign:CheckBoxAssist.CheckBoxSize="30"
+                    IsChecked="False" Checked="FilterChanged" Unchecked="FilterChanged"
+                    Content="Special"/>
+            <CheckBox x:Name="AChecker" materialDesign:CheckBoxAssist.CheckBoxSize="30"
+                    IsChecked="False" Checked="FilterChanged" Unchecked="FilterChanged"
+                    Content="A"/>
+            <CheckBox x:Name="BChecker" materialDesign:CheckBoxAssist.CheckBoxSize="30"
+                    IsChecked="False" Checked="FilterChanged" Unchecked="FilterChanged"
+                    Content="B"/>
+            <CheckBox x:Name="CChecker" materialDesign:CheckBoxAssist.CheckBoxSize="30"
+                    IsChecked="False" Checked="FilterChanged" Unchecked="FilterChanged"
+                    Content="C"/>
+            <CheckBox x:Name="ExclusiveChecker" materialDesign:CheckBoxAssist.CheckBoxSize="30"
+                    IsChecked="False" Checked="FilterChanged" Unchecked="FilterChanged"
+                    Content="Exclusive"/>
+            <DockPanel>
+                <TextBlock Text="SP" VerticalAlignment="Center" Margin="10,10,10,10"/>
+                <Slider x:Name="SpSlider" Value="100" Minimum="100" Maximum="500" Style="{StaticResource MaterialDesignDiscreteSlider}"
+                    Ticks="0, 200, 240, 300, 350, 400, 500" TickPlacement="Both" ValueChanged="FilterChanged"/>
+            </DockPanel>
+            
+            <CheckBox x:Name="RefineChecker" materialDesign:CheckBoxAssist.CheckBoxSize="30"
+                    IsChecked="False" Checked="FilterChanged" Unchecked="FilterChanged"
+                    Content="Refined"/>
+            <CheckBox x:Name="CantoChecker" materialDesign:CheckBoxAssist.CheckBoxSize="30"
+                    IsChecked="False" Checked="FilterChanged" Unchecked="FilterChanged"
+                    Content="Canto"/>
+        </StackPanel>
+        <ListBox x:Name="SkillList" Grid.Column="1" MouseDoubleClick="SkillList_MouseDoubleClick">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <materialDesign:Chip Content="{Binding Name}"
+                                             IconBackground="Transparent">
+                            <materialDesign:Chip.Icon>
+                                <Image Source="{Binding Icon}" />
+                            </materialDesign:Chip.Icon>
+                        </materialDesign:Chip>
+                        <TextBox
+                                Text="{Binding Description, Mode=OneWay}"
+                                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                AcceptsReturn="True"
+                                TextWrapping="Wrap"
+                                IsEnabled="False" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Window>
