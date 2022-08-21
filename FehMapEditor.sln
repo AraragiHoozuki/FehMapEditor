@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32106.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FehMapEditor", "FehMapEditor\FehMapEditor.csproj", "{EE20F926-BC09-46F2-B75E-4F1568D62358}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE20F926-BC09-46F2-B75E-4F1568D62358}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE20F926-BC09-46F2-B75E-4F1568D62358}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE20F926-BC09-46F2-B75E-4F1568D62358}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE20F926-BC09-46F2-B75E-4F1568D62358}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8C62EC36-D2BF-47E4-BDE3-1CAC1C046C1E}
+	EndGlobalSection
+EndGlobal
